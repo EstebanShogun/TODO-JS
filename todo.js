@@ -66,6 +66,7 @@ function newElement() {
 			div.style.display = "none";
 		}
 	}
+	location.reload();
 }
 
 function getTask() {
