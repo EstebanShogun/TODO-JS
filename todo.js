@@ -28,14 +28,6 @@ for (i = 0; i < close.length; i++) {
 	}
 }
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-	if (ev.target.tagName === 'LI') {
-		ev.target.classList.toggle('checked');
-	}
-}, false);
-
 // Create a new list item when clicking on the "Add" button
 function newElement() {
 	var li = document.createElement("li");
@@ -87,10 +79,7 @@ function getTask() {
 	for (var i = json.length - 1; i >= 0; i--) {
 		var li = document.createElement("li");
 		var t = document.createTextNode(json[i][1]);
-		li.appendChild(t);
-		if(json[i][2] == "Oui"){
-			li.className = "checked";
-		}
+		li.appendChild(t);		
 		document.getElementById("myUL").appendChild(li);
 	}
 }
